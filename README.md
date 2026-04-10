@@ -1,6 +1,3 @@
-# Sample-Reward-Soups-ICLR26
-Official code for "Sample Reward Soups: Query-efficient Multi-Reward Guidance for Text-to-Image Diffusion Models (ICLR 2026) "
-=======
 # Sample Reward Soups (SRSoup)
 
 Official implementation of the paper:  
