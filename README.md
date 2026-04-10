@@ -1,14 +1,12 @@
 # Sample Reward Soups (SRSoup)
 
 Official implementation of the paper:  
-**“Sample Reward Soups: Query-efficient Multi-Reward Guidance for Text-to-Image Diffusion Models” (ICLR 2026)**  
-👉 https://openreview.net/forum?id=MNVxrgRcJV
+**“Sample Reward Soups: Query-efficient Multi-Reward Guidance for Text-to-Image Diffusion Models”** [(ICLR 2026)](https://openreview.net/forum?id=MNVxrgRcJV)
 
 <p align="center">
   <img src="./assets/poster.png" width="80%">
 </p>
 
----
 
 ## 🔧 Environment Setup
 
@@ -19,10 +17,8 @@ conda activate srsoup_env
 pip install git+https://github.com/openai/CLIP.git
 ```
 
-Need to download HPSv2 from:
-https://huggingface.co/xswu/HPSv2/blob/697403c78157020a1ae59d23f111aa58ced35b0a/HPS_v2_compressed.pt
+Download [HPSv2](https://huggingface.co/xswu/HPSv2/blob/697403c78157020a1ae59d23f111aa58ced35b0a/HPS_v2_compressed.pt) and put it at `./soup/utils/hps`
 
----
 
 ## 🐾 Experiment: Animal (Aesthetic & Compress)
 
@@ -33,8 +29,6 @@ https://huggingface.co/xswu/HPSv2/blob/697403c78157020a1ae59d23f111aa58ced35b0a/
 
 - **Test set**: 6 animal prompts  
   - `config.prompt_fn = eval_simple_animals`
-
----
 
 ### ▶️ SRSoup Inference
 
@@ -49,9 +43,6 @@ python scripts/inference_srsoup_sd1-5.py \
 python eval_scripts/eval_score.py
 ```
 
-
----
-
 ### ⚖️ Weighted Sum Baseline
 
 ```bash
@@ -59,7 +50,6 @@ python scripts/inference_ws.py \
   --config configs/guide_ws_sd-v1-5.py:aes_compress
 ```
 
----
 
 ## 🎨 Experiment: HPD (Aesthetic & HPSv2 & PickScore)
 
@@ -71,16 +61,12 @@ python scripts/inference_ws.py \
 - **Test set**: 50 prompts  
   - `config.prompt_fn = eval_hps_v2_all`
 
----
-
 ### ▶️ SRSoup Inference
 
 ```bash
 python scripts/inference_srsoup_sd1-5.py \
   --config configs/guide_srsoup_sd-v1-5.py:aes_hps
 ```
-
----
 
 ### Three objective
 
@@ -108,7 +94,6 @@ python scripts/inference_srsoup_sd3.py \
   --config configs/guide_ws_sd3.py:aes_pick
 ```
 
----
 
 
 ## 📖 Citation
