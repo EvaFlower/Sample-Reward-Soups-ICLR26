@@ -1,0 +1,5 @@
+__pycache__/
+**/__pycache__/
+./soup/utils/open_clip/
+./soup/utils/hps/
+soup/utils/hps/HPS_v2_compressed.pt
