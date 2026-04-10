@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sample-Reward-Soups-ICLR26
 Official code for "Sample Reward Soups: Query-efficient Multi-Reward Guidance for Text-to-Image Diffusion Models (ICLR 2026) "
 =======
@@ -127,5 +126,3 @@ If you find this work useful, please cite:
   year={2026}
 }
 ```
-
->>>>>>> fa62d31 (Initial commit)
